@@ -1,0 +1,16 @@
+# Crear y escribir en el archivo de texto
+with open("my_notes.txt", "w") as file:
+    # Escribir al menos tres líneas de notas personales
+    file.write("Esta es mi primera nota personal.\n")
+    file.write("Necesito estudiar para el examen de física.\n")
+    file.write("Recoger las flores del jardín más tarde.\n")
+
+# Leer el contenido del archivo línea por línea
+with open("my_notes.txt", "r") as file:
+    # Leer cada línea y mostrarla en la consola
+    line = file.readline()
+    while line:
+        print(line.strip())  # Usamos strip() para eliminar saltos de línea extras
+        line = file.readline()
+
+# El archivo se cierra automáticamente al salir del bloque 'with'
